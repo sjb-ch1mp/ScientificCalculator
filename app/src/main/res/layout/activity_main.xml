@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:borderWidth="0.1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:maxImageSize="36dp"
+        app:srcCompat="@mipmap/graph_launcher" />
+
+    <EditText
+        android:id="@+id/calculation_textarea"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:background="@null"
+        android:cursorVisible="true"
+        android:gravity="bottom"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:singleLine="false"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textCursorDrawable="@null"
+        android:textIsSelectable="true"
+        android:textSize="36sp"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        tools:ignore="LabelFor" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/operations_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/basic_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_basic" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/operations_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_scientific" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/history_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_history" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/graph_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_graph" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>
